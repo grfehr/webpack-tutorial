@@ -1,7 +1,13 @@
-// Please don't use the master branch.
-// There are separate git branches in this repository related to each Lesson. They are usually named the same as the Lessons are named. For example, if you are watching Lesson 33 "How To Generate Multiple HTML Files", there are 2 branches related to this lesson:
-// - how-to-generate-multiple-html-files-begin
-// - how-to-generate-multiple-html-files-end
+import HelloWorldButton from './components/hello-world-button/hello-world-button.js';
+import Heading from './components/heading/heading.js';
 
-// There is a separate video explaining how to use Github repository in this course. 
-// In this video I talk about how to switch between branches and how to use the repository.
+const heading = new Heading();
+heading.render();
+const helloWorldButton = new HelloWorldButton();
+helloWorldButton.render();
+
+if (process.env.NODE_ENV === 'production') {
+    console.log('Production mode');
+} else if (process.env.NODE_ENV === 'development') {
+    console.log('Development mode');
+}
